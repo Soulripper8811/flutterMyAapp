@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Demo",
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: GestureDetector(
+        onTap: () {
+          print("Hello button click hui he");
+        },
+        child: Text(
+          "Mein button hu",
+          style: TextStyle(color: Colors.cyan, fontSize: 40),
+        ),
+      ),
+    );
+  }
+}
